@@ -6,7 +6,6 @@ layout: default
  <link rel="stylesheet/less" type="text/css" href="http://kalburgimanjunath.github.io/palette/less/style.less" />
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
       <script src="http://kalburgimanjunath.github.io/palette/js/less-1.5.0.min.js" type="text/javascript"></script>
-      <!-- <link href="/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
       <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 
 Jekyll is a Ruby script to generate a static HTML website from source text and themes. Unlike Wordpress, Drupal, Tumblr or other services, the HTML is generated before being deployed to the web server– not during each web request. Therefore, blogs using Jekyll load extremely fast and can handle high volumes of traffic without hiccups.
