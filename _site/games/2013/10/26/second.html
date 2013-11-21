@@ -1,0 +1,27 @@
+<p>A Cute girl has come to spa massage school. Now its time to give a nice massage to her. There are four steps to give her a full body massage. Face Massage, Body Massage, Leg Massage and Foot Massage. Go through the instructions and become a great massager.</p>
+
+<p><script>
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+  }
+xmlhttp.open(&quot;GET&quot;,&quot;freegames.xml&quot;,false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML; </p>
+
+<p>document.write(&quot;<table border='1'>&quot;);
+var x=xmlDoc.getElementsByTagName(&quot;CD&quot;);
+for (i=0;i<x.length;i++)
+  { 
+  document.write("<tr><td>&quot;);
+  document.write(x[i].getElementsByTagName(&quot;ARTIST&quot;)[0].childNodes[0].nodeValue);
+  document.write(&quot;</td><td>&quot;);
+  document.write(x[i].getElementsByTagName(&quot;TITLE&quot;)[0].childNodes[0].nodeValue);
+  document.write(&quot;</td></tr>&quot;);
+  }
+document.write(&quot;</table>&quot;);
+</script></p>
