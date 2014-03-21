@@ -31,51 +31,12 @@ title:select box
     <option value="2015">2015</option>
 </select>
 <style>
-@import "compass";
-@import url("http://fonts.googleapis.com/css?family=Lato");
 
-$background: #e74c3c;
-$select-color: #fff;
-$select-background: #c0392b;
-$select-width: 220px;
-$select-height: 40px; 
 
-body { 
-  font-family: Lato, Arial;
-  color: $select-color;
-  padding: 20px;
-  background-color: $background;
-}
-h1 {
-  font-weight: normal;
-  font-size: 40px;
-  font-weight: normal;
-  text-transform: uppercase;
-  span { 
-    font-size: 13px;
-    display: block;
-    padding-left: 4px;
-  }
-}
-p {
-  margin-top: 200px;
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    padding: 5px 10px;
-    margin: 0 5px;
-    background-color: darken($select-background, 2);
-    @include transition(all 0.2s ease-in);
-    &:hover {
-      background-color: darken($select-background, 5);
-    }
-  }
-}
 .select-hidden {
   display: none;
   visibility: hidden;
+
   padding-right: 10px;
 }
 .select {
@@ -83,9 +44,10 @@ p {
   display: inline-block;
   position: relative;
   font-size: 16px;
-  color: $select-color;
-  width: $select-width;
-  height: $select-height;
+  color: #fff;
+  width: 220px;
+  height: 40px;
+  
 }
 .select-styled {
   position: absolute; 
@@ -93,29 +55,26 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: $select-background;
+  background-color: #c0392b;
   padding: 8px 15px;
-  @include transition(all 0.2s ease-in);
-  &:after {
+  
+}
+.select-styled:after{
     content:"";
     width: 0;
     height: 0;
     border: 7px solid transparent;
-    border-color: $select-color transparent transparent transparent;
+    /*border-color: $select-color transparent transparent transparent;*/
     position: absolute;
     top: 16px;
     right: 10px;
-  }
-  &:hover {
-    background-color: darken($select-background, 2);
-  }
-  &:active, &.active {
-    background-color: darken($select-background, 5);
-    &:after {
-      top: 9px;
-      border-color: transparent transparent $select-color transparent;
-    }
-  }
+}
+.select-styled:hover{
+    background-color: #c0392b;
+}
+.select-styled:active{
+    background-color: #c0392b;
+    top: 9px;
 }
 
 .select-options {
@@ -128,12 +87,13 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: darken($select-background, 5);
+  background-color: #c0392b;
+  /*
   li {
     margin: 0;
     padding: 12px 0;
     text-indent: 15px;
-    border-top: 1px solid darken($select-background, 10);
+    border-top: 1px solid darken(#c0392b, 10);
     @include transition(all 0.15s ease-in);
     &:hover {
       color: $select-background;
@@ -142,8 +102,20 @@ p {
     &[rel="hide"] {
       display: none;
     }
-  }
+  }*/
 }
+.select-options li{
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid #c0392b;
+}
+
+.select-options li:hover{
+    color: #fff;
+    background: green;
+}    
+
 </style>
 <script>
 $('select').each(function(){
